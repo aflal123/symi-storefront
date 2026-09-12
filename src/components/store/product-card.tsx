@@ -155,7 +155,7 @@ export function ProductCard({
                   <span className="text-[8px] text-[#8BA894]">1-Click</span>
                 </div>
 
-                <div className="grid grid-cols-4 gap-1">
+                <div className={cn("grid gap-1", isSingleSize ? "grid-cols-1" : "grid-cols-4")}>
                   {sizes.map((size) => (
                     <button
                       key={size}
@@ -163,7 +163,7 @@ export function ProductCard({
                       onClick={(e) => handleQuickAdd(size, e)}
                       className={cn(
                         "rounded-md border border-white/15 bg-white/10 py-1.5 text-center text-[9.5px] font-bold tracking-[0.14em] text-[#F8F5EE] uppercase transition-all duration-150 hover:border-[#52735B] hover:bg-[#52735B] hover:text-white hover:scale-105 active:scale-95",
-                        isSingleSize && "col-span-4 py-2 flex items-center justify-center gap-1.5"
+                        isSingleSize && "py-2 flex items-center justify-center gap-1.5"
                       )}
                     >
                       {isSingleSize && <ShoppingBag className="size-3" />}

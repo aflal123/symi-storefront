@@ -174,30 +174,31 @@ export function ProductModal({
               {product.note}. Crafted at the SYMI atelier in Beruwala, Sri Lanka. Designed for longevity with reinforced seams and premium finishes.
             </p>
 
-            {/* Size Picker */}
-            <div className="mt-6">
-              <div className="flex justify-between text-[10px] font-bold tracking-wider text-muted-foreground uppercase">
-                <span>{isSingleSize ? "Size" : "Select Size"}</span>
-                {!isSingleSize && <span className="cursor-pointer underline">Size Guide</span>}
+            {/* Size Picker (Apparel Only) */}
+            {!isSingleSize && (
+              <div className="mt-6">
+                <div className="flex justify-between text-[10px] font-bold tracking-wider text-muted-foreground uppercase">
+                  <span>Select Size</span>
+                  <span className="cursor-pointer underline">Size Guide</span>
+                </div>
+                <div className="mt-2.5 grid grid-cols-4 gap-2">
+                  {sizes.map((size) => (
+                    <button
+                      key={size}
+                      onClick={() => setSelectedSize(size)}
+                      className={cn(
+                        "rounded-md border py-2 text-[10px] font-bold tracking-widest uppercase transition-all",
+                        selectedSize === size
+                          ? "border-[#52735B] bg-[#52735B] text-white shadow-xs"
+                          : "border-border bg-card text-foreground hover:border-foreground/40"
+                      )}
+                    >
+                      {size}
+                    </button>
+                  ))}
+                </div>
               </div>
-              <div className="mt-2.5 grid grid-cols-4 gap-2">
-                {sizes.map((size) => (
-                  <button
-                    key={size}
-                    onClick={() => setSelectedSize(size)}
-                    className={cn(
-                      "rounded-md border py-2 text-[10px] font-bold tracking-widest uppercase transition-all",
-                      selectedSize === size
-                        ? "border-[#52735B] bg-[#52735B] text-white shadow-xs"
-                        : "border-border bg-card text-foreground hover:border-foreground/40",
-                      isSingleSize && "col-span-4"
-                    )}
-                  >
-                    {size}
-                  </button>
-                ))}
-              </div>
-            </div>
+            )}
 
             {/* Quantity Selector */}
             <div className="mt-5 flex items-center justify-between border-y border-border/60 py-4">
