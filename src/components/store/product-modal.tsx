@@ -33,7 +33,11 @@ export function ProductModal({
 
   useEffect(() => {
     setSelectedImgIndex(0);
-    setSelectedSize(product?.cat === "accessories" ? "ONE SIZE" : "M");
+    setSelectedSize(
+      ["accessories", "perfumes", "household"].includes(product?.cat ?? "")
+        ? "ONE SIZE"
+        : "M"
+    );
     setQty(1);
     setAdded(false);
   }, [product]);
@@ -46,8 +50,8 @@ export function ProductModal({
 
   const currentImage = images[selectedImgIndex] || product.image;
 
-  const isAccessory = product.cat === "accessories";
-  const sizes = isAccessory ? ["ONE SIZE"] : ["S", "M", "L", "XL"];
+  const isSingleSize = ["accessories", "perfumes", "household"].includes(product.cat);
+  const sizes = isSingleSize ? ["ONE SIZE"] : ["S", "M", "L", "XL"];
 
   const handleAddToCart = () => {
     for (let i = 0; i < qty; i++) {
@@ -173,8 +177,8 @@ export function ProductModal({
             {/* Size Picker */}
             <div className="mt-6">
               <div className="flex justify-between text-[10px] font-bold tracking-wider text-muted-foreground uppercase">
-                <span>Select Size</span>
-                {!isAccessory && <span className="cursor-pointer underline">Size Guide</span>}
+                <span>{isSingleSize ? "Size" : "Select Size"}</span>
+                {!isSingleSize && <span className="cursor-pointer underline">Size Guide</span>}
               </div>
               <div className="mt-2.5 grid grid-cols-4 gap-2">
                 {sizes.map((size) => (
@@ -185,7 +189,8 @@ export function ProductModal({
                       "rounded-md border py-2 text-[10px] font-bold tracking-widest uppercase transition-all",
                       selectedSize === size
                         ? "border-[#52735B] bg-[#52735B] text-white shadow-xs"
-                        : "border-border bg-card text-foreground hover:border-foreground/40"
+                        : "border-border bg-card text-foreground hover:border-foreground/40",
+                      isSingleSize && "col-span-4"
                     )}
                   >
                     {size}

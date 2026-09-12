@@ -45,8 +45,8 @@ export function ProductCard({
     ? Math.round((1 - product.price / product.was) * 100)
     : 0;
 
-  const isAccessory = product.cat === "accessories";
-  const sizes = isAccessory ? ["ONE SIZE"] : SIZES_APPAREL;
+  const isSingleSize = ["accessories", "perfumes", "household"].includes(product.cat);
+  const sizes = isSingleSize ? ["ONE SIZE"] : SIZES_APPAREL;
   const swatches = COLORWAYS[product.id] || ["#24201C", "#52735B", "#ECE5D8"];
 
   const handleQuickAdd = (size: string, e: React.MouseEvent) => {
@@ -144,7 +144,9 @@ export function ProductCard({
             {addedSize ? (
               <div className="flex items-center justify-center gap-1.5 py-1.5 text-center text-[10px] font-bold tracking-[0.2em] text-emerald-300 uppercase">
                 <Check className="size-3.5 text-emerald-400" />
-                <span>Added to Bag ({addedSize})</span>
+                <span>
+                  {addedSize === "ONE SIZE" ? "Added to Bag" : `Added to Bag (${addedSize})`}
+                </span>
               </div>
             ) : (
               <>
@@ -161,11 +163,11 @@ export function ProductCard({
                       onClick={(e) => handleQuickAdd(size, e)}
                       className={cn(
                         "rounded-md border border-white/15 bg-white/10 py-1.5 text-center text-[9.5px] font-bold tracking-[0.14em] text-[#F8F5EE] uppercase transition-all duration-150 hover:border-[#52735B] hover:bg-[#52735B] hover:text-white hover:scale-105 active:scale-95",
-                        isAccessory && "col-span-4 py-2 flex items-center justify-center gap-1.5"
+                        isSingleSize && "col-span-4 py-2 flex items-center justify-center gap-1.5"
                       )}
                     >
-                      {isAccessory && <ShoppingBag className="size-3" />}
-                      {size}
+                      {isSingleSize && <ShoppingBag className="size-3" />}
+                      {isSingleSize ? "Add to Bag" : size}
                     </button>
                   ))}
                 </div>
