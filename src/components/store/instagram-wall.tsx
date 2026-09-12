@@ -21,7 +21,7 @@ export function InstagramWall() {
           }
         />
       </Shell>
-      <Marquee pauseOnHover className="[--duration:44s] [--gap:0.5rem]">
+      <Marquee pauseOnHover className="[--duration:18s] [--gap:0.5rem]">
         {INSTAGRAM.map((src, i) => (
           <a
             key={typeof src === "string" ? src : i}

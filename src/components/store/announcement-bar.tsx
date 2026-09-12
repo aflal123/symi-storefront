@@ -8,7 +8,7 @@ const ITEMS = [
 export function AnnouncementBar() {
   return (
     <div className="dark border-y border-[#52735B]/25 bg-[#141813] text-foreground">
-      <Marquee className="[--duration:36s] [--gap:0px] py-0.5">
+      <Marquee className="[--duration:15s] [--gap:0px] py-0.5">
         {ITEMS.map((item) => (
           <span
             key={item}

@@ -79,7 +79,7 @@ export function PromoBannerShowcase({
 
     const timer = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % activeBanners.length);
-    }, 5000);
+    }, 2500);
 
     return () => clearInterval(timer);
   }, [activeBanners.length, isHovered]);
