@@ -95,21 +95,21 @@ export function SiteHeader({
       >
         <div
           className={cn(
-            "mx-auto flex w-full max-w-[1360px] items-center justify-between gap-2 sm:gap-6 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 transition-all duration-500",
-            scrolled ? "h-16 sm:h-18" : "h-18 sm:h-24"
+            "mx-auto flex w-full max-w-[1360px] items-center justify-between gap-2 sm:gap-4 px-3.5 sm:px-6 md:px-8 transition-all duration-300",
+            scrolled ? "h-14 sm:h-16" : "h-16 sm:h-20"
           )}
         >
           {/* Brand Wordmark (Left) */}
           <a
             href="#top"
             aria-label="SYMI home"
-            className="shrink-0 transition-transform duration-300 hover:scale-102 hover:opacity-90 max-w-[140px] sm:max-w-none overflow-hidden"
+            className="shrink-0 transition-transform duration-300 hover:scale-102 hover:opacity-90"
           >
             <Wordmark />
           </a>
 
           {/* Navigation Links with Smooth Active Glider & Megamenu (Center) */}
-          <nav className="hidden lg:flex flex-1 items-center justify-center gap-7 xl:gap-11 mx-6 relative">
+          <nav className="hidden lg:flex flex-1 items-center justify-center gap-4 xl:gap-8 mx-4 relative">
             {NAV.map((label) => {
               const href =
                 (label as string) === "New Arrivals"
@@ -121,7 +121,7 @@ export function SiteHeader({
               return (
                 <div
                   key={label}
-                  className="relative py-4"
+                  className="relative py-3"
                   onMouseEnter={() => hasMega && setActiveMegamenu(label)}
                   onMouseLeave={() => setActiveMegamenu(null)}
                 >
@@ -129,7 +129,7 @@ export function SiteHeader({
                     href={href}
                     onClick={(e) => handleNavClick(label, e)}
                     className={cn(
-                      "group relative inline-flex items-center gap-1.5 text-[12.5px] xl:text-[13.5px] font-bold tracking-[0.2em] uppercase transition-all duration-300",
+                      "group relative inline-flex items-center gap-1 text-[11.5px] xl:text-[12.5px] font-bold tracking-[0.16em] uppercase transition-all duration-300",
                       activeSection === label
                         ? "text-[#52735B]"
                         : "text-foreground/80 hover:text-[#52735B]"

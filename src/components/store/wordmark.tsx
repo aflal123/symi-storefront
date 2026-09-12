@@ -12,7 +12,7 @@ export function Wordmark({
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-2 font-display text-2xl sm:text-3xl lg:text-[34px] font-black leading-none tracking-[0.16em]",
+        "inline-flex items-center gap-2 font-display text-lg sm:text-xl lg:text-2xl font-black leading-none tracking-[0.14em]",
         className,
       )}
     >
@@ -20,10 +20,10 @@ export function Wordmark({
         <img
           src="/images/symi-official-logo.png"
           alt="SYMI Official Emblem"
-          className="size-8 sm:size-9 lg:size-10 rounded-full object-cover shadow-sm border border-emerald-600/40 shrink-0"
+          className="size-7 sm:size-8 lg:size-8 rounded-full object-cover shadow-sm border border-emerald-600/40 shrink-0"
         />
       )}
-      <span>SYMI</span>
+      <span className="whitespace-nowrap">SYMI</span>
     </span>
   );
 }
