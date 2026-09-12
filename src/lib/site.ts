@@ -9,7 +9,7 @@ export const BRAND = {
   name: "SYMI",
   season: "",
   tagline: "Rooted in culture. Made for now.",
-  city: "Beruwala, Sri Lanka",
+  city: "Beruwala",
   studios: "Beruwala",
   email: "hello@symi.lk",
   whatsapp: "94770000000",
