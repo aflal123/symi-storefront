@@ -45,7 +45,8 @@ export function ProductCard({
     ? Math.round((1 - product.price / product.was) * 100)
     : 0;
 
-  const isSingleSize = ["accessories", "perfumes", "household"].includes(product.cat);
+  const catLower = (product.cat || "").toLowerCase();
+  const isSingleSize = !["men", "women", "unisex"].includes(catLower);
   const sizes = isSingleSize ? ["ONE SIZE"] : SIZES_APPAREL;
   const swatches = COLORWAYS[product.id] || ["#24201C", "#52735B", "#ECE5D8"];
 

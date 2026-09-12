@@ -33,11 +33,9 @@ export function ProductModal({
 
   useEffect(() => {
     setSelectedImgIndex(0);
-    setSelectedSize(
-      ["accessories", "perfumes", "household"].includes(product?.cat ?? "")
-        ? "ONE SIZE"
-        : "M"
-    );
+    const catLower = (product?.cat || "").toLowerCase();
+    const isApparel = ["men", "women", "unisex"].includes(catLower);
+    setSelectedSize(isApparel ? "M" : "ONE SIZE");
     setQty(1);
     setAdded(false);
   }, [product]);
@@ -50,7 +48,8 @@ export function ProductModal({
 
   const currentImage = images[selectedImgIndex] || product.image;
 
-  const isSingleSize = ["accessories", "perfumes", "household"].includes(product.cat);
+  const catLower = (product.cat || "").toLowerCase();
+  const isSingleSize = !["men", "women", "unisex"].includes(catLower);
   const sizes = isSingleSize ? ["ONE SIZE"] : ["S", "M", "L", "XL"];
 
   const handleAddToCart = () => {
