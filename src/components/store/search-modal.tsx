@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Search, X, ArrowRight, TrendingUp, Sparkles } from "lucide-react";
+import { Search, X, ArrowRight, TrendingUp } from "lucide-react";
 import { PRODUCTS, money, type Product } from "@/lib/site";
 import { useCart } from "@/components/cart/cart-provider";
 

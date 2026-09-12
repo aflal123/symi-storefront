@@ -1,4 +1,4 @@
-import { Calendar, MapPin, Award, Users, ExternalLink, Sparkles, ShieldCheck, ShoppingBag } from "lucide-react";
+import { Calendar, MapPin, Award, Users, ExternalLink, ShieldCheck, ShoppingBag } from "lucide-react";
 import { Section, Shell, SectionHeading } from "@/components/store/section";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { Wordmark } from "@/components/store/wordmark";
@@ -121,7 +121,7 @@ export function ShahmeeEventShowcase() {
 
         {/* 2. Main Event Section Heading */}
         <SectionHeading
-          eyebrow="Community // Heritage // Honouring Procession"
+          eyebrow="Community"
           title="Shahmy Shaheed Honouring Walk"
           copy="A historic community milestone on September 3, 2024 — celebrating perseverance, youth inspiration, and cultural pride in Sri Lanka."
           action={
@@ -199,7 +199,7 @@ export function ShahmeeEventShowcase() {
               rel="noopener noreferrer"
               className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-[10px] font-bold tracking-widest text-white uppercase backdrop-blur-md transition-all hover:bg-white hover:text-black shrink-0 active:scale-95"
             >
-              <Sparkles className="size-3.5 text-[#8BA894]" />
+              <ShoppingBag className="size-3.5 text-[#8BA894]" />
               <span>Visit SYMI E-Commerce</span>
             </a>
           </div>

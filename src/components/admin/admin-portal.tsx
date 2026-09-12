@@ -16,7 +16,7 @@ import {
   Eye,
   BarChart3,
   MapPin,
-  Sparkles,
+  Zap,
   Check,
   LayoutDashboard,
   Users,
@@ -1212,7 +1212,7 @@ export function AdminPortal({
                   <CardHeader className="p-4 pb-2">
                     <div className="flex items-center justify-between">
                       <CardTitle className="text-xs font-bold uppercase text-slate-800 flex items-center gap-2">
-                        <Sparkles className="size-3.5 text-amber-500" />
+                        <Zap className="size-3.5 text-amber-500" />
                         1-Click Festive & Offer Campaign Templates
                       </CardTitle>
                       <span className="text-[10px] font-mono font-bold text-slate-500 uppercase">
@@ -1678,7 +1678,7 @@ export function AdminPortal({
               <CardHeader className="flex flex-row items-center justify-between border-b border-slate-200 pb-3">
                 <div>
                   <CardTitle className="text-base font-bold uppercase text-slate-900 flex items-center gap-2">
-                    <Sparkles className="size-4 text-[#52735B]" />
+                    <Package className="size-4 text-[#52735B]" />
                     Add New Product to Store Catalog
                   </CardTitle>
                   <CardDescription className="text-xs text-slate-500">

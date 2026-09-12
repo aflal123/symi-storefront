@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, Filter, Sparkles } from "lucide-react";
+import { ChevronDown, Filter, ShoppingBag } from "lucide-react";
 import { PRODUCTS, CATEGORIES, type Product, type ProductCategory } from "@/lib/site";
 import { Section, Shell, SectionHeading } from "@/components/store/section";
 import { ProductCard } from "@/components/store/product-card";
@@ -114,7 +114,7 @@ export function TheLatest({
           </div>
         ) : (
           <div className="my-12 flex flex-col items-center justify-center rounded-2xl border border-dashed border-border p-6 sm:p-16 text-center">
-            <Sparkles className="size-8 text-muted-foreground/50 mb-3" />
+            <ShoppingBag className="size-8 text-muted-foreground/50 mb-3" />
             <h3 className="font-display text-lg sm:text-xl uppercase tracking-wider text-foreground">
               No products found in this category
             </h3>

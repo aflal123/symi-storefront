@@ -11,7 +11,7 @@ import {
   ShieldCheck,
   Truck,
   RotateCcw,
-  Sparkles,
+  Award,
 } from "lucide-react";
 import { cn } from "cn";
 import { money, type Product } from "@/lib/site";
@@ -116,7 +116,7 @@ export function ProductModal({
               )}
               {product.handloom && (
                 <span className="inline-flex items-center gap-1 rounded-full bg-amber-600 px-2 py-0.5 sm:px-2.5 sm:py-1 text-[8.5px] sm:text-[9px] font-bold tracking-widest text-white uppercase shadow-xs">
-                  <Sparkles className="size-2.5" /> Handloom
+                  <Award className="size-2.5" /> Handloom
                 </span>
               )}
             </div>

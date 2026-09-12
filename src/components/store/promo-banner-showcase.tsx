@@ -11,7 +11,7 @@ import {
   Flame,
   Gift,
   Percent,
-  Sparkles,
+  Zap,
   ShieldCheck,
 } from "lucide-react";
 import { cn } from "cn";
@@ -118,7 +118,7 @@ export function PromoBannerShowcase({
       case "offer":
         return <Percent className="size-3.5 text-amber-400" />;
       case "flash_drop":
-        return <Sparkles className="size-3.5 text-emerald-400" />;
+        return <Zap className="size-3.5 text-emerald-400" />;
       default:
         return <Tag className="size-3.5 text-[#8BA894]" />;
     }

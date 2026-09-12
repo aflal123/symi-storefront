@@ -161,7 +161,7 @@ export function SiteHeader({
                     <div className="absolute top-full left-1/2 -translate-x-1/2 w-[680px] rounded-2xl border border-border bg-[#181512]/95 p-6 backdrop-blur-2xl shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200">
                       <div className="flex items-center justify-between border-b border-white/10 pb-3 mb-4">
                         <span className="text-[10px] font-bold tracking-[0.2em] text-[#52735B] uppercase flex items-center gap-1.5">
-                          <Sparkles className="size-3" /> SYMI Atelier // {label}
+                          <ShieldCheck className="size-3.5" /> SYMI Atelier // {label}
                         </span>
                         <span className="text-[9px] font-mono text-muted-foreground uppercase">
                           Handcrafted in Sri Lanka

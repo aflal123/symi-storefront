@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Heart, Check, ShoppingBag, Sparkles } from "lucide-react";
+import { Heart, Check, ShoppingBag, Award } from "lucide-react";
 import { cn } from "cn";
 import { Art } from "@/lib/art";
 import { money, type Product } from "@/lib/site";
@@ -106,7 +106,7 @@ export function ProductCard({
 
           {product.handloom && (
             <span className="inline-flex items-center gap-1 sm:gap-1.5 rounded-full border border-amber-500/30 bg-[#351E0E]/90 px-2 py-0.5 sm:px-2.5 sm:py-1 text-[8px] sm:text-[9px] font-bold tracking-[0.14em] sm:tracking-[0.16em] uppercase text-amber-200 backdrop-blur-md shadow-xs">
-              <Sparkles className="size-2 sm:size-2.5 text-amber-400" />
+              <Award className="size-2 sm:size-2.5 text-amber-400" />
               HANDLOOM
             </span>
           )}

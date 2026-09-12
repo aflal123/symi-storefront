@@ -1,4 +1,4 @@
-import { Download, Sparkles } from "lucide-react";
+import { Download, Tag } from "lucide-react";
 import { SUBNAV } from "@/lib/site";
 
 export function CategoryStrip({
@@ -68,7 +68,7 @@ export function CategoryStrip({
             id="btn-as-seen-in-store"
             className="group hidden sm:inline-flex items-center gap-2 rounded-full border border-border/80 bg-card/70 px-4 py-2 text-[10px] sm:text-[11px] font-bold tracking-[0.18em] uppercase text-foreground/85 transition-all duration-200 hover:border-[#C06845] hover:bg-[#C06845] hover:text-white active:scale-[0.98] whitespace-nowrap"
           >
-            <Sparkles className="size-3.5 text-[#C06845] transition-transform duration-200 group-hover:rotate-12 group-hover:text-white" />
+            <Tag className="size-3.5 text-[#C06845] transition-transform duration-200 group-hover:rotate-12 group-hover:text-white" />
             <span>As Seen In Store</span>
           </a>
         </div>
