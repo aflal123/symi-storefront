@@ -298,7 +298,7 @@ export function SiteHeader({
               <User className="size-4" /> Open Admin Portal
             </button>
             <div className="text-center font-mono text-[9px] tracking-widest text-muted-foreground uppercase">
-              SYMI Colombo // Beruwala · FW26 Collection
+              SYMI Atelier · Beruwala, Sri Lanka
             </div>
           </div>
         </div>

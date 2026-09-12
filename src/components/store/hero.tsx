@@ -66,29 +66,10 @@ export function Hero() {
         }}
       />
 
-      {/* 4. Top Right Lookbook & Studio Badges */}
-      <div className="absolute top-8 right-5 z-20 hidden text-right text-[10px] leading-relaxed tracking-[0.22em] uppercase opacity-70 sm:right-8 lg:right-16 lg:block">
-        <div className="font-semibold text-white">{BRAND.season} Look Book</div>
-        <div className="text-white/60">No. 01 — {BRAND.studios}</div>
-        <div className="mt-1.5 inline-flex items-center gap-1.5 font-mono text-[9px] tracking-widest text-emerald-400/90">
-          <span className="relative flex size-2">
-            <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
-          </span>
-          STORE REEL // LIVE (1080P)
-        </div>
-      </div>
+     
 
       {/* 5. Main Full-Screen Hero Content & Headlines (Above Video) */}
       <div className="relative z-10 mx-auto w-full max-w-[1360px] px-4 pt-16 pb-12 sm:px-8 sm:pt-20 sm:pb-24 lg:px-16">
-        <BlurFade inView>
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-1 sm:px-3.5 sm:py-1.5 backdrop-blur-md">
-            <Film className="size-3 text-white/60" />
-            <AnimatedShinyText className="mx-0 text-[9px] sm:text-[10px] font-semibold tracking-[0.22em] sm:tracking-[0.24em] text-white/80 uppercase">
-              SYMI HOLDINGS
-            </AnimatedShinyText>
-          </div>
-        </BlurFade>
 
         <BlurFade inView delay={0.08}>
           <h1 className="display-tight mt-4 sm:mt-6 text-[clamp(2.5rem,10.5vw,10.5rem)] font-extrabold tracking-tighter text-white drop-shadow-sm leading-[0.95]">

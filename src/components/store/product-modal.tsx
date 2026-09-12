@@ -167,7 +167,7 @@ export function ProductModal({
             </div>
 
             <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
-              {product.note}. Crafted at the SYMI atelier in Colombo and Beruwala, Sri Lanka. Designed for longevity with reinforced seams and premium finishes.
+              {product.note}. Crafted at the SYMI atelier in Beruwala, Sri Lanka. Designed for longevity with reinforced seams and premium finishes.
             </p>
 
             {/* Size Picker */}

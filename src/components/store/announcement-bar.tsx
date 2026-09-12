@@ -2,10 +2,7 @@ import { Marquee } from "@/components/ui/marquee";
 
 const ITEMS = [
   "Free islandwide shipping over LKR 15,000",
-  "FW26 — now in stores",
-  "Cut & sewn in Sri Lanka",
-  "New drops every fortnight",
-  "Colombo // Beruwala",
+  
 ];
 
 export function AnnouncementBar() {

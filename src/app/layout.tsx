@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "SYMI — Define Your Style",
   description:
-    "SYMI — contemporary Sri Lankan streetwear. Structured weights, precise drops. Rooted in culture, made for now. Colombo · Beruwala.",
+    "SYMI — contemporary Sri Lankan streetwear. Structured weights, precise drops. Rooted in culture, made for now. Beruwala.",
   metadataBase: new URL("https://symi.lk"),
   openGraph: {
     title: "SYMI — Define Your Style",

@@ -108,7 +108,7 @@ const INITIAL_CUSTOMERS: CustomerRecord[] = [
     name: "Kasun Jayawardena",
     email: "kasun.j@example.lk",
     phone: "+94 77 123 4567",
-    city: "Colombo 07",
+    city: "Beruwala",
     totalOrders: 6,
     totalSpent: 184500,
     tier: "VIP Platinum",
@@ -178,7 +178,7 @@ export function AdminPortal({
 
   // Notifications Log
   const [notifications] = useState([
-    { id: 1, msg: "New Order #SYMI-9821 received from Colombo 07", time: "10m ago", type: "order" },
+    { id: 1, msg: "New Order #SYMI-9821 received from Beruwala", time: "10m ago", type: "order" },
     { id: 2, msg: "Low stock alert: Lattafa Bint Hooran (3 units remaining)", time: "25m ago", type: "stock" },
     { id: 3, msg: "Express courier pickup completed for Order #SYMI-9819", time: "1h ago", type: "shipping" },
   ]);
@@ -214,7 +214,7 @@ export function AdminPortal({
 
   // Store Settings state
   const [expressDeliveryEnabled, setExpressDeliveryEnabled] = useState(true);
-  const [colomboStudioOnline, setColomboStudioOnline] = useState(true);
+  const [centralStudioOnline, setCentralStudioOnline] = useState(true);
   const [beruwalaStudioOnline, setBeruwalaStudioOnline] = useState(true);
 
   if (!isOpen) return null;
@@ -343,7 +343,7 @@ export function AdminPortal({
         highlightStats: [
           { label: "Festive Markdown", value: "25% OFF" },
           { label: "Handloom Batches", value: "100% Pure" },
-          { label: "Dispatch Hub", value: "Colombo & Beruwala" },
+          { label: "Dispatch Hub", value: "Beruwala Studio" },
         ],
       };
     } else if (preset === "eid") {
@@ -576,7 +576,7 @@ export function AdminPortal({
                 </span>
               </div>
               <div className="mt-1 text-[9.5px] text-emerald-900 font-medium">
-                Colombo 07 & Beruwala Atelier connected to dispatch grid.
+                Beruwala Atelier connected to dispatch grid.
               </div>
             </div>
 
@@ -616,7 +616,6 @@ export function AdminPortal({
                 className="h-8 rounded-lg border border-slate-300 bg-white px-2.5 text-xs text-slate-800 font-medium focus:border-[#52735B] focus:outline-none shadow-2xs"
               >
                 <option value="All Studios">All Studios (Global)</option>
-                <option value="Colombo Studio">Colombo 07 Studio</option>
                 <option value="Beruwala Studio">Beruwala Coastal Hub</option>
               </select>
 
@@ -738,7 +737,7 @@ export function AdminPortal({
                           Weekly Revenue & Fulfillment Velocity (LKR)
                         </CardTitle>
                         <CardDescription className="text-xs text-slate-500">
-                          Real-time stream from Colombo & Beruwala Point-of-Sale terminals.
+                          Real-time stream from Beruwala Point-of-Sale terminal.
                         </CardDescription>
                       </div>
                       <Badge variant="outline" className="font-mono text-[9px] text-[#52735B] border-[#52735B]/40 bg-[#52735B]/10">
@@ -1440,7 +1439,7 @@ export function AdminPortal({
                     <Card size="sm" className="bg-slate-50 border-slate-200">
                       <CardHeader className="p-3 pb-1">
                         <CardDescription className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">
-                          Colombo Metro (Western)
+                          Western & Coastal Region
                         </CardDescription>
                         <CardTitle className="text-2xl font-bold text-slate-900 mt-1">
                           58% Volume
@@ -1448,7 +1447,7 @@ export function AdminPortal({
                       </CardHeader>
                       <CardContent className="p-3 pt-0">
                         <span className="text-[10px] text-emerald-800 font-bold font-mono block">Same-Day Express Dispatch</span>
-                        <span className="text-[9px] text-slate-500 font-medium">PickMe & Studio Courier</span>
+                        <span className="text-[9px] text-slate-500 font-medium font-mono">Express Courier Service</span>
                       </CardContent>
                     </Card>
 
@@ -1518,9 +1517,9 @@ export function AdminPortal({
                     </TableHeader>
                     <TableBody>
                       {[
-                        { name: "PickMe Express", type: "Colombo Same-Day", time: "2.4 Hours", rate: "99.2%", status: "Active" },
-                        { name: "PromptX Express", type: "Islandwide 24h", time: "18.5 Hours", rate: "97.8%", status: "Active" },
-                        { name: "SpeedDraft Logistics", type: "Provincial Trunk", time: "24.0 Hours", rate: "96.4%", status: "Active" },
+                        { name: "PromptX Express", type: "Express Same-Day", time: "2.4 Hours", rate: "99.2%", status: "Active" },
+                        { name: "SpeedDraft Logistics", type: "Islandwide 24h", time: "18.5 Hours", rate: "97.8%", status: "Active" },
+                        { name: "Islandwide Post", type: "Provincial Trunk", time: "24.0 Hours", rate: "96.4%", status: "Active" },
                       ].map((partner, idx) => (
                         <TableRow key={idx}>
                           <TableCell className="font-semibold text-slate-900">{partner.name}</TableCell>
@@ -1623,23 +1622,23 @@ export function AdminPortal({
                   <CardContent className="space-y-4">
                     <div className="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 bg-slate-50">
                       <div>
-                        <h4 className="text-xs font-bold text-slate-900 uppercase">Colombo 07 Flagship Studio Hub</h4>
+                        <h4 className="text-xs font-bold text-slate-900 uppercase">Beruwala Central Atelier Hub</h4>
                         <p className="text-[10.5px] text-slate-500">Primary dispatch center for same-day express orders.</p>
                       </div>
                       <Button
                         size="xs"
-                        variant={colomboStudioOnline ? "default" : "outline"}
-                        onClick={() => setColomboStudioOnline(!colomboStudioOnline)}
-                        className={colomboStudioOnline ? "bg-emerald-700 hover:bg-emerald-800 text-white" : "border-slate-300 text-slate-700"}
+                        variant={centralStudioOnline ? "default" : "outline"}
+                        onClick={() => setCentralStudioOnline(!centralStudioOnline)}
+                        className={centralStudioOnline ? "bg-emerald-700 hover:bg-emerald-800 text-white" : "border-slate-300 text-slate-700"}
                       >
-                        {colomboStudioOnline ? "ONLINE" : "OFFLINE"}
+                        {centralStudioOnline ? "ONLINE" : "OFFLINE"}
                       </Button>
                     </div>
 
                     <div className="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 bg-slate-50">
                       <div>
-                        <h4 className="text-xs font-bold text-slate-900 uppercase">Beruwala Coastal Studio Hub</h4>
-                        <p className="text-[10.5px] text-slate-500">Southern coastal hub for handloom & saree dispatches.</p>
+                        <h4 className="text-xs font-bold text-slate-900 uppercase">Beruwala Coastal Loom Workroom</h4>
+                        <p className="text-[10.5px] text-slate-500">Coastal workroom for handloom & artisan craft dispatches.</p>
                       </div>
                       <Button
                         size="xs"
@@ -1654,7 +1653,7 @@ export function AdminPortal({
                     <div className="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 bg-slate-50">
                       <div>
                         <h4 className="text-xs font-bold text-slate-900 uppercase">Express Delivery Route Dispatch</h4>
-                        <p className="text-[10.5px] text-slate-500">Enable instant PickMe Express checkout option for Colombo.</p>
+                        <p className="text-[10.5px] text-slate-500 font-sans">Enable instant express delivery checkout option.</p>
                       </div>
                       <Button
                         size="xs"

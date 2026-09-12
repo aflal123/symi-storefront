@@ -24,7 +24,7 @@ export function NewArrivals({
         <SectionHeading
           eyebrow="Off the loom & the atelier"
           title="New arrivals"
-          copy="Fresh cuts from the Colombo and Beruwala workrooms. Handmade essentials, limited runs."
+          copy="Fresh cuts from the Beruwala workroom. Handmade essentials, limited runs."
           action={
             <div className="flex gap-2">
               <button

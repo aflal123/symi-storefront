@@ -82,8 +82,7 @@ export function Story() {
           <p className="mt-6 max-w-lg text-sm text-muted-foreground leading-relaxed">
             SYMI brings contemporary style and cultural identity together through
             thoughtfully designed products made for everyday life. Born from an
-            artisanal root in Beruwala and engineered for the modern streets of
-            Colombo, each garment balances heritage craft and forward intent.
+            artisanal root in Beruwala, each garment balances heritage craft and forward intent.
           </p>
           <p className="mt-4 max-w-lg text-sm text-muted-foreground leading-relaxed">
             We work with independent looms and small workrooms across the island,

@@ -63,7 +63,7 @@ export function BuiltDifferent() {
             className="size-full object-cover"
           />
           <span className="absolute right-5 bottom-5 border border-white/25 px-3 py-2 text-[9px] font-bold tracking-[0.18em] text-white/70 uppercase">
-            Design // FW26
+            Beruwala Atelier
           </span>
         </div>
       </div>

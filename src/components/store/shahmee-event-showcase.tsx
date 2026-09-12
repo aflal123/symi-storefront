@@ -103,7 +103,7 @@ export function ShahmeeEventShowcase() {
                   Supporting the Journey
                 </span>
                 <p className="leading-relaxed text-white/75">
-                  SYMI Holdings proudly supported Shahmy Shaheed&apos;s historic walking journey on September 3, 2024 from Beruwala to Colombo — honoring local youth achievement, community strength, and cultural heritage across Sri Lanka.
+                  SYMI Holdings proudly supported Shahmy Shaheed&apos;s historic walking journey on September 3, 2024 — honoring local youth achievement, community strength, and cultural heritage across Sri Lanka.
                 </p>
               </div>
 
@@ -132,7 +132,7 @@ export function ShahmeeEventShowcase() {
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/5 px-3 py-1 sm:px-3.5 sm:py-1.5 text-[9px] sm:text-[10px] font-bold tracking-widest text-white/80 uppercase backdrop-blur-md">
                 <MapPin className="size-3 text-[#C06845]" />
-                Beruwala // Colombo
+                Beruwala
               </span>
             </div>
           }

@@ -88,12 +88,12 @@ export const INITIAL_BANNERS: PromoBanner[] = [
     ],
   },
   {
-    id: "banner-colombo-exclusive",
+    id: "banner-beruwala-exclusive",
     type: "occasional",
-    badge: "COLOMBO & BERUWALA SPECIAL",
-    title: "Same-Day Studio Dispatch",
+    badge: "BERUWALA STUDIO SPECIAL",
+    title: "Direct Studio Dispatch",
     subtitle:
-      "Order before 2:00 PM for direct courier express delivery straight to your doorstep across Western and Southern provinces.",
+      "Order before 2:00 PM for direct courier express delivery straight to your doorstep across Southern and Western provinces.",
     discountTag: "FREE EXPRESS SHIPPING",
     promoCode: "EXPRESSLK",
     buttonText: "Shop Studio Staples",
@@ -101,7 +101,7 @@ export const INITIAL_BANNERS: PromoBanner[] = [
     bgImage: "/images/symi-brand-street-campaign-event.jpg",
     theme: "charcoal",
     countdownHours: 24,
-    terms: "*Applicable on all orders over Rs. 10,000. Colombo 01-15 & Greater Colombo.",
+    terms: "*Applicable on all orders over Rs. 10,000. Express delivery across Sri Lanka.",
     isActive: false,
     highlightStats: [
       { label: "Delivery Speed", value: "Same-Day" },
