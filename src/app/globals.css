@@ -1,0 +1,213 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-paper-2: var(--paper-2);
+  --color-ink-dim: var(--ink-dim);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-heading: var(--font-display);
+  --font-display: var(--font-display);
+  --tracking-brand: 0.18em;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+    }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+    }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+  --animate-shiny-text: shiny-text 8s infinite
+;
+  @keyframes shiny-text {
+  0%, 90%, 100% {
+    background-position: calc(-100% - var(--shiny-width)) 0;}
+  30%, 60% {
+    background-position: calc(100% + var(--shiny-width)) 0;}}
+  --animate-shimmer-slide: shimmer-slide var(--speed) ease-in-out infinite alternate;
+  --animate-spin-around: spin-around calc(var(--speed) * 2) infinite linear;
+  @keyframes shimmer-slide {
+  to {
+    transform: translate(calc(100cqw - 100%), 0);}}
+  @keyframes spin-around {
+  0% {
+    transform: translateZ(0) rotate(0);}
+  15%, 35% {
+    transform: translateZ(0) rotate(90deg);}
+  65%, 85% {
+    transform: translateZ(0) rotate(270deg);}
+  100% {
+    transform: translateZ(0) rotate(360deg);}}  --color-sage: #52735B;
+  --color-sage-light: #8BA894;
+  --color-sage-mist: #E3EBE5;
+  --color-clay: #C06845;
+  --color-terracotta: #A84D2B;
+  --color-espresso: #1B1815;
+  --color-linen: #F8F5EE;
+  --color-sand: #EDE7DC;
+}
+
+:root {
+  /* SYMI — Artisanal Earth & Sage (Raw Woven Linen, Espresso Obsidian, Sage & Terracotta) */
+  --background: oklch(0.978 0.010 82);
+  --foreground: oklch(0.185 0.018 60);
+  --paper-2: oklch(0.948 0.015 80);
+  --ink-dim: oklch(0.460 0.022 68);
+  --card: oklch(0.992 0.006 85);
+  --card-foreground: oklch(0.185 0.018 60);
+  --popover: oklch(0.992 0.006 85);
+  --popover-foreground: oklch(0.185 0.018 60);
+  --primary: oklch(0.205 0.020 60);
+  --primary-foreground: oklch(0.978 0.010 82);
+  --secondary: oklch(0.938 0.020 85);
+  --secondary-foreground: oklch(0.185 0.018 60);
+  --muted: oklch(0.938 0.012 85);
+  --muted-foreground: oklch(0.460 0.020 68);
+  --accent: oklch(0.925 0.030 140);
+  --accent-foreground: oklch(0.220 0.040 145);
+  --destructive: oklch(0.55 0.20 28);
+  --border: oklch(0.885 0.014 75);
+  --input: oklch(0.885 0.014 75);
+  --ring: oklch(0.48 0.08 145);
+  --chart-1: oklch(0.48 0.08 145);
+  --chart-2: oklch(0.58 0.13 45);
+  --chart-3: oklch(0.72 0.12 85);
+  --chart-4: oklch(0.35 0.04 140);
+  --chart-5: oklch(0.21 0.02 60);
+  --radius: 0.5rem;
+  --sidebar: oklch(0.978 0.010 82);
+  --sidebar-foreground: oklch(0.185 0.018 60);
+  --sidebar-primary: oklch(0.205 0.020 60);
+  --sidebar-primary-foreground: oklch(0.978 0.010 82);
+  --sidebar-accent: oklch(0.925 0.030 140);
+  --sidebar-accent-foreground: oklch(0.220 0.040 145);
+  --sidebar-border: oklch(0.885 0.014 75);
+  --sidebar-ring: oklch(0.48 0.08 145);
+}
+
+.dark {
+  /* SYMI Dark — Deep Cypress Obsidian & Luminous Linen Ivory */
+  --background: oklch(0.135 0.014 135);
+  --foreground: oklch(0.965 0.010 85);
+  --paper-2: oklch(0.165 0.018 135);
+  --ink-dim: oklch(0.680 0.020 80);
+  --card: oklch(0.185 0.018 135);
+  --card-foreground: oklch(0.965 0.010 85);
+  --popover: oklch(0.185 0.018 135);
+  --popover-foreground: oklch(0.965 0.010 85);
+  --primary: oklch(0.950 0.014 85);
+  --primary-foreground: oklch(0.135 0.014 135);
+  --secondary: oklch(0.210 0.020 135);
+  --secondary-foreground: oklch(0.965 0.010 85);
+  --muted: oklch(0.210 0.020 135);
+  --muted-foreground: oklch(0.680 0.020 80);
+  --accent: oklch(0.240 0.035 145);
+  --accent-foreground: oklch(0.965 0.010 85);
+  --destructive: oklch(0.60 0.19 30);
+  --border: oklch(0.96 0.01 85 / 12%);
+  --input: oklch(0.96 0.01 85 / 15%);
+  --ring: oklch(0.68 0.09 145);
+  --chart-1: oklch(0.68 0.09 145);
+  --chart-2: oklch(0.68 0.12 50);
+  --chart-3: oklch(0.72 0.12 85);
+  --chart-4: oklch(0.50 0.06 140);
+  --chart-5: oklch(0.85 0.02 85);
+  --sidebar: oklch(0.165 0.018 135);
+  --sidebar-foreground: oklch(0.965 0.010 85);
+  --sidebar-primary: oklch(0.950 0.014 85);
+  --sidebar-primary-foreground: oklch(0.135 0.014 135);
+  --sidebar-accent: oklch(0.240 0.035 145);
+  --sidebar-accent-foreground: oklch(0.965 0.010 85);
+  --sidebar-border: oklch(0.96 0.01 85 / 12%);
+  --sidebar-ring: oklch(0.68 0.09 145);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+  }
+  html {
+    @apply font-sans antialiased;
+  }
+}
+
+@utility eyebrow {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+@utility display-tight {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  line-height: 0.96;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+/* horizontal scroll rails */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
