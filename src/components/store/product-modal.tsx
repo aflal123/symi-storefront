@@ -53,9 +53,7 @@ export function ProductModal({
   const sizes = isSingleSize ? ["ONE SIZE"] : ["S", "M", "L", "XL"];
 
   const handleAddToCart = () => {
-    for (let i = 0; i < qty; i++) {
-      add(product);
-    }
+    add(product, qty);
     setAdded(true);
     setTimeout(() => setAdded(false), 2000);
   };

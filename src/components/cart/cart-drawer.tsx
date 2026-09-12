@@ -62,7 +62,7 @@ export function CartDrawer() {
                     {product.name}
                   </h5>
                   <small className="text-[9px] tracking-[0.14em] text-muted-foreground uppercase">
-                    {product.cat} · size M
+                    {product.cat}
                   </small>
                   <div className="mt-3 inline-flex items-center border border-border">
                     <button
@@ -111,6 +111,7 @@ export function CartDrawer() {
             </div>
             <a
               href="#checkout"
+              onClick={() => setOpen(false)}
               className="mt-4 flex w-full items-center justify-center rounded-sm border border-foreground bg-foreground px-8 py-4 text-[10px] font-bold tracking-[0.2em] text-background uppercase shadow-md transition-all duration-200 hover:border-[#52735B] hover:bg-[#52735B] hover:text-white"
             >
               Proceed to checkout

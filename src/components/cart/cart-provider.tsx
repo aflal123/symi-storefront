@@ -17,7 +17,7 @@ type CartValue = {
   subtotal: number;
   open: boolean;
   setOpen: (v: boolean) => void;
-  add: (product: Product) => void;
+  add: (product: Product, quantity?: number) => void;
   setQty: (id: number, qty: number) => void;
   remove: (id: number) => void;
 };
@@ -34,8 +34,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const [bag, setBag] = useState<Record<number, number>>(seed);
   const [open, setOpen] = useState(false);
 
-  const add = useCallback((product: Product) => {
-    setBag((b) => ({ ...b, [product.id]: (b[product.id] ?? 0) + 1 }));
+  const add = useCallback((product: Product, quantity = 1) => {
+    setBag((b) => ({ ...b, [product.id]: (b[product.id] ?? 0) + quantity }));
     setOpen(true);
   }, []);
 
