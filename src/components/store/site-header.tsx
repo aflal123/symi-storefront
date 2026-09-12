@@ -297,8 +297,9 @@ export function SiteHeader({
             >
               <User className="size-4" /> Open Admin Portal
             </button>
-            <div className="text-center font-mono text-[9px] tracking-widest text-muted-foreground uppercase">
-              SYMI Atelier · Beruwala, Sri Lanka
+            <div className="flex items-center justify-center gap-2 font-mono text-[9px] tracking-widest text-muted-foreground uppercase">
+              <img src="/images/symi-official-logo.png" alt="SYMI" className="size-4 rounded-full" />
+              <span>SYMI Atelier · Beruwala, Sri Lanka</span>
             </div>
           </div>
         </div>

@@ -96,8 +96,9 @@ export function SiteFooter({
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row text-[11px] text-muted-foreground">
           <p>© {new Date().getFullYear()} {BRAND.name}. All rights reserved.</p>
-          <p className="text-[10px] tracking-wider uppercase text-muted-foreground/60">
-            Beruwala Studio Flagship
+          <p className="text-[10px] tracking-wider uppercase text-muted-foreground/60 flex items-center gap-1.5">
+            <img src="/images/symi-official-logo.png" alt="SYMI" className="size-4 rounded-full" />
+            <span>Beruwala Studio Flagship</span>
           </p>
         </div>
       </div>

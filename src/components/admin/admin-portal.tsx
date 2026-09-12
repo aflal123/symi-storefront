@@ -500,8 +500,8 @@ export function AdminPortal({
             {/* Branding & Status Badge */}
             <div className="flex items-center justify-between pb-4 border-b border-slate-200">
               <div className="flex items-center gap-3">
-                <div className="grid size-10 place-items-center rounded-xl bg-[#52735B] text-white shadow-sm">
-                  <Store className="size-5" />
+                <div className="size-10 rounded-full overflow-hidden border border-[#52735B]/30 shadow-sm bg-white shrink-0 p-0.5">
+                  <img src="/images/symi-official-logo.png" alt="SYMI Logo" className="size-full rounded-full object-cover" />
                 </div>
                 <div>
                   <h2 className="font-display text-base font-bold tracking-wider uppercase text-slate-900">
