@@ -30,6 +30,14 @@ export const metadata: Metadata = {
       "Contemporary Sri Lankan streetwear. Structured weights, precise drops.",
     type: "website",
   },
+  icons: {
+    icon: [
+      { url: "/images/symi-official-logo.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/images/symi-official-logo.png",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
